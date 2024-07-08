@@ -13,6 +13,6 @@ Dev tool screenshot (Red line is the username to copy)
 
 You can test with a MQTT tool like MQTT Explorer
 
-MQTT Explorer connexion setup
+MQTT Explorer connexion setup (no password)
 
 ![Capture May 12 Multiscrape (1)](https://github.com/harb70/bayrolas5-nodered/assets/93473437/e0f4fa69-650d-40c1-9142-188c920980fb)
