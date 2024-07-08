@@ -1,6 +1,8 @@
-# bayrolas5-nodered
+## bayrolas5-nodered
 
-How to connect to Bayrol MQTT broker 
+# Using Nodered to connect to Bayrol MQTT broker and send incoming messages to local Mosquitto Broker ( including Home Assistant configuration )
+
+1) How to connect to Bayrol MQTT broker 
 
 connect to the web portal
 clic on “Direct Access”
