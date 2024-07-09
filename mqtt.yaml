@@ -1,4 +1,4 @@
-# 'd02/XXXXXX-XXXXX/v/4.100', 'homeassistant/pool/bayrolAS5/salt' g/l /10
+# 'd02/XXXXXX-XXXXX/v/4.100', 'salt' g/l /10
 - state_topic: "d02/23ASE2-05145/v/4.100"
   name: "Salt"
   unique_id: salt
@@ -8,7 +8,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.102', 'homeassistant/pool/bayrolAS5/conductivity'mS/cm /10
+# 'd02/XXXXXX-XXXXX/v/4.102', 'conductivity' mS/cm /10
 - state_topic: "d02/23ASE2-05145/v/4.102"
   name: "Conductivity"
   unique_id: conductivity
@@ -18,7 +18,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.104', 'homeassistant/pool/bayrolAS5/electrolyser-voltage' V /10
+# 'd02/XXXXXX-XXXXX/v/4.104', 'electrolyser-voltage' V /10
 - state_topic: "d02/23ASE2-05145/v/4.104"
   name: "Electrolyzer voltage"
   unique_id: electrolyser_voltage
@@ -28,7 +28,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.105', 'homeassistant/pool/bayrolAS5/electrolyser-current' A /10
+# 'd02/XXXXXX-XXXXX/v/4.105', 'electrolyser-current' A /10
 - state_topic: "d02/23ASE2-05145/v/4.105"
   name: "Electrolyzer current"
   unique_id: electrolyser_current
@@ -38,7 +38,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.107', 'homeassistant/pool/bayrolAS5/battery-voltage' V /100
+# 'd02/XXXXXX-XXXXX/v/4.107', 'battery-voltage' V /100
 - state_topic: "d02/23ASE2-05145/v/4.107"
   name: "Battery voltage"
   unique_id: battery_voltage
@@ -48,7 +48,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.112', 'homeassistant/pool/bayrolAS5/timer-polarity-reversal' s
+# 'd02/XXXXXX-XXXXX/v/4.112', 'timer-polarity-reversal' s
 - state_topic: "d02/23ASE2-05145/v/4.112"
   name: "Time before next polarity reversal"
   unique_id: timer_polarity_reversal
@@ -58,7 +58,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.119', 'homeassistant/pool/bayrolAS5/time-since-last-reversal' s
+# 'd02/XXXXXX-XXXXX/v/4.119', 'time-since-last-reversal' s
 - state_topic: "d02/23ASE2-05145/v/4.119"
   name: "Time since polarity reversal"
   unique_id: time_since_last_reversal
@@ -68,7 +68,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.182', 'homeassistant/pool/bayrolAS5/ph' pH /10
+# 'd02/XXXXXX-XXXXX/v/4.182', 'ph' pH /10
 - state_topic: "d02/23ASE2-05145/v/4.182"
   name: "pH"
   unique_id: ph
@@ -78,7 +78,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.2', 'homeassistant/pool/bayrolAS5/ph-target' /10
+# 'd02/XXXXXX-XXXXX/v/4.2', 'ph-target' /10
 - state_topic: "d02/23ASE2-05145/v/4.2"
   name: "pH Target"
   unique_id: ph_target
@@ -88,7 +88,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.26', 'homeassistant/pool/bayrolAS5/redox-alert-max'
+# 'd02/XXXXXX-XXXXX/v/4.26', 'redox-alert-max'
 - state_topic: "d02/23ASE2-05145/v/4.26"
   name: "Redox Alert Max"
   unique_id: redox_alert_max
@@ -98,7 +98,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.27', 'homeassistant/pool/bayrolAS5/redox-alert-min'
+# 'd02/XXXXXX-XXXXX/v/4.27', 'redox-alert-min'
 - state_topic: "d02/23ASE2-05145/v/4.27"
   name: "Redox Alert Min"
   unique_id: redox_alert_min
@@ -108,7 +108,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.28', 'homeassistant/pool/bayrolAS5/redox-alert'
+# 'd02/XXXXXX-XXXXX/v/4.28', 'redox-alert'
 - state_topic: "d02/23ASE2-05145/v/4.28"
   name: "Redox Target"
   unique_id: redox_target
@@ -118,7 +118,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.3', 'homeassistant/pool/bayrolAS5/ph-alert-max' /10
+# 'd02/XXXXXX-XXXXX/v/4.3', 'ph-alert-max' /10
 - state_topic: "d02/23ASE2-05145/v/4.3"
   name: "pH Alert Max"
   unique_id: ph_alert_max
@@ -128,7 +128,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.34', 'homeassistant/pool/bayrolAS5/min-control-ph' /100
+# 'd02/XXXXXX-XXXXX/v/4.34', 'min-control-ph' /100
 - state_topic: "d02/23ASE2-05145/v/4.34"
   name: "Minimal approach to control the pH"
   unique_id: min_control_ph
@@ -138,7 +138,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.38', 'homeassistant/pool/bayrolAS5/ph-dosing-cycle' s
+# 'd02/XXXXXX-XXXXX/v/4.38', 'ph-dosing-cycle' s
 - state_topic: "d02/23ASE2-05145/v/4.38"
   name: "pH dosing cycle"
   unique_id: ph_dosing_cycle
@@ -148,7 +148,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.4', 'homeassistant/pool/bayrolAS5/ph-alert-min' /10
+# 'd02/XXXXXX-XXXXX/v/4.4', 'ph-alert-min' /10
 - state_topic: "d02/23ASE2-05145/v/4.4"
   name: "pH Alert Min"
   unique_id: ph_alert_min
@@ -158,7 +158,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.47', 'homeassistant/pool/bayrolAS5/ph-dosing-speed' %
+# 'd02/XXXXXX-XXXXX/v/4.47', 'ph-dosing-speed' %
 - state_topic: "d02/23ASE2-05145/v/4.47"
   name: "pH dosing speed"
   unique_id: ph_dosing_speed
@@ -168,7 +168,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.5', 'homeassistant/pool/bayrolAS5/ph-dosage-control-time' m
+# 'd02/XXXXXX-XXXXX/v/4.5', 'ph-dosage-control-time' m
 - state_topic: "d02/23ASE2-05145/v/4.5"
   name: "pH dosage control time interval"
   unique_id: ph_dosage_control_time
@@ -178,7 +178,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.51', 'homeassistant/pool/bayrolAS5/polarity-reversal-times' m
+# 'd02/XXXXXX-XXXXX/v/4.51', 'polarity-reversal-times' m
 - state_topic: "d02/23ASE2-05145/v/4.51"
   name: "Polarity reversal times"
   unique_id: polarity_reversal_times
@@ -188,7 +188,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.69', 'homeassistant/pool/bayrolAS5/hour-count' h
+# 'd02/XXXXXX-XXXXX/v/4.69', 'hour-count' h
 - state_topic: "d02/23ASE2-05145/v/4.69"
   name: "Hourly counter"
   unique_id: hour_count
@@ -198,7 +198,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.7', 'homeassistant/pool/bayrolAS5/min-count' m
+# 'd02/XXXXXX-XXXXX/v/4.7', 'min-count' m
 - state_topic: "d02/23ASE2-05145/v/4.7"
   name: "Minutes counter"
   unique_id: min_count
@@ -208,7 +208,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.82', 'homeassistant/pool/bayrolAS5/redox' mv
+# 'd02/XXXXXX-XXXXX/v/4.82', 'redox' mv
 - state_topic: "d02/23ASE2-05145/v/4.82"
   name: "Redox"
   unique_id: redox
@@ -218,7 +218,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.89', 'homeassistant/pool/bayrolAS5/ph-dosing-rate' %
+# 'd02/XXXXXX-XXXXX/v/4.89', 'ph-dosing-rate' %
 - state_topic: "d02/23ASE2-05145/v/4.89"
   name: "pH dosing rate"
   unique_id: ph_dosing_rate
@@ -228,7 +228,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.91', 'homeassistant/pool/bayrolAS5/electrolyser-prod-rate' %
+# 'd02/XXXXXX-XXXXX/v/4.91', 'electrolyser-prod-rate' %
 - state_topic: "d02/23ASE2-05145/v/4.91"
   name: "Electrolyzer production rate"
   unique_id: electrolyser_prod_rate
@@ -238,7 +238,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.92', 'homeassistant/pool/bayrolAS5/startup-delay' m
+# 'd02/XXXXXX-XXXXX/v/4.92', 'startup-delay' m
 - state_topic: "d02/23ASE2-05145/v/4.92"
   name: "Startup delay"
   unique_id: startup_delay
@@ -248,7 +248,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.98', 'homeassistant/pool/bayrolAS5/temperature' C /10
+# 'd02/XXXXXX-XXXXX/v/4.98', 'temperature' C /10
 - state_topic: "d02/23ASE2-05145/v/4.98"
   name: "Temperature"
   unique_id: temperature
@@ -258,7 +258,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/5.3', 'homeassistant/pool/bayrolAS5/ph-prod-rate' %
+# 'd02/XXXXXX-XXXXX/v/5.3', 'ph-prod-rate' %
 - state_topic: "d02/23ASE2-05145/v/5.3"
   name: "Ph production rate"
   unique_id: ph_prod_rate
@@ -276,7 +276,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/5.4', 'homeassistant/pool/bayrolAS5/redox-state'
+# 'd02/XXXXXX-XXXXX/v/5.4', 'redox-state'
 - state_topic: "d02/23ASE2-05145/v/5.4"
   name: "Redox ON / OFF"
   unique_id: redox_state
@@ -292,7 +292,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/5.41', 'homeassistant/pool/bayrolAS5/redox-mode'
+# 'd02/XXXXXX-XXXXX/v/5.41', 'redox-mode'
 - state_topic: "d02/23ASE2-05145/v/5.41"
   name: "Redox Mode"
   unique_id: redox_mode
@@ -310,7 +310,7 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/5.98', 'homeassistant/pool/bayrolAS5/filtration-state'
+# 'd02/XXXXXX-XXXXX/v/5.98', 'filtration-state'
 - state_topic: "d02/23ASE2-05145/v/5.98"
   name: "Filtration"
   unique_id: filtration_state

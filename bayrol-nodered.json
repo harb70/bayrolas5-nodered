@@ -2,7 +2,7 @@
     {
         "id": "5bd26b90a33373fd",
         "type": "tab",
-        "label": "Bayrol AS5",
+        "label": "Bayrol AS5 HOME164",
         "disabled": false,
         "info": "",
         "env": []
@@ -163,7 +163,7 @@
         "y": 140,
         "wires": [
             [
-                "91d9821ec0d3b7e3"
+                "745863e79fe7996e"
             ]
         ]
     },
@@ -186,6 +186,31 @@
         "x": 320,
         "y": 280,
         "wires": []
+    },
+    {
+        "id": "745863e79fe7996e",
+        "type": "switch",
+        "z": "5bd26b90a33373fd",
+        "name": "Filter",
+        "property": "payload.state_topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "d02/",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "91d9821ec0d3b7e3"
+            ]
+        ]
     },
     {
         "id": "5e9b943f5d1f22f3",
