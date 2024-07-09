@@ -173,7 +173,7 @@
   name: "pH dosage control time interval"
   unique_id: ph_dosage_control_time
   value_template: "{{ value_json.v | round(2)}}"
-  unit_of_measurement: "m"
+  unit_of_measurement: "min"
   device:
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
@@ -183,7 +183,7 @@
   name: "Polarity reversal times"
   unique_id: polarity_reversal_times
   value_template: "{{ value_json.v | round(2)}}"
-  unit_of_measurement: "m"
+  unit_of_measurement: "min"
   device:
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
@@ -203,7 +203,7 @@
   name: "Minutes counter"
   unique_id: min_count
   value_template: "{{ value_json.v | round(2)}}"
-  unit_of_measurement: "m"
+  unit_of_measurement: "min"
   device:
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
@@ -213,7 +213,7 @@
   name: "Redox"
   unique_id: redox
   value_template: "{{ value_json.v | round(2)}}"
-  unit_of_measurement: "mv"
+  unit_of_measurement: "mV"
   device:
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
@@ -263,11 +263,11 @@
   name: "Ph production rate"
   unique_id: ph_prod_rate
   value_template: >
-    {% if value_json.v == 19.5 %}
+    {% if value_json.v | float == 19.5 %}
       "x0.75"
-    {% elif value_json.v == 19.7 %}
+    {% elif value_json.v | float == 19.7 %}
       "x1.25"
-    {% elif value_json.v == 19.6 %}
+    {% elif value_json.v | float == 19.6 %}
       "Normal"
     {% else %}
       "UNKNOWN"
@@ -276,14 +276,14 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/5.4', 'redox-state'
+# 'd02/XXXXXX-XXXXX/v/5.4', 'redox-state' NOT WORKING
 - state_topic: "d02/23ASE2-05145/v/5.4"
   name: "Redox ON / OFF"
   unique_id: redox_state
   value_template: >
-    {% if value_json.v == 19.18 %}
+    {% if value_json.v | float == 19.6 %}
       "ON"
-    {% elif value_json.v == 19.17 %}
+    {% elif value_json.v | float == 19.17 %}
       "OFF"
     {% else %}
       "UNKNOWN"
@@ -297,11 +297,11 @@
   name: "Redox Mode"
   unique_id: redox_mode
   value_template: >
-    {% if value_json.v == 19.195 %}
+    {% if value_json.v | float == 19.195 %}
       "Auto"
-    {% elif value_json.v == 19.115 %}
+    {% elif value_json.v | float == 19.115 %}
       "Auto Plus"
-    {% elif value_json.v == 19.106 %}
+    {% elif value_json.v | float == 19.106 %}
       "Constant Production"
     {% else %}
       "UNKNOWN"
@@ -315,9 +315,9 @@
   name: "Filtration"
   unique_id: filtration_state
   value_template: >
-    {% if value_json.v == 19.177 %}
+    {% if value_json.v | float == 19.177 %}
       "ON"
-    {% elif value_json.v == 19.176 %}
+    {% elif value_json.v | float == 19.176 %}
       "OFF"
     {% else %}
       "UNKNOWN"
