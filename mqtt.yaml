@@ -1,7 +1,7 @@
-# 'd02/XXXXXX-XXXXX/v/4.1', 'homeassistant/pool/bayrolAS5/salt' g/l /10
-- state_topic: "homeassistant/pool/bayrolAS5/salt"
+# 'd02/XXXXXX-XXXXX/v/4.100', 'homeassistant/pool/bayrolAS5/salt' g/l /10
+- state_topic: "d02/23ASE2-05145/v/4.100"
   name: "Salt"
-  unique_id: bayrolas5_salt
+  unique_id: salt
   value_template: "{{ value_json.v / 10 | round(2)}}"
   unit_of_measurement: "g/l"
   device:
@@ -9,9 +9,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.102', 'homeassistant/pool/bayrolAS5/conductivity'mS/cm /10
-- state_topic: "homeassistant/pool/bayrolAS5/conductivity"
+- state_topic: "d02/23ASE2-05145/v/4.102"
   name: "Conductivity"
-  unique_id: bayrolas5_conductivity
+  unique_id: conductivity
   value_template: "{{ value_json.v / 10 | round(2)}}"
   unit_of_measurement: "mS/cm"
   device:
@@ -19,9 +19,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.104', 'homeassistant/pool/bayrolAS5/electrolyser-voltage' V /10
-- state_topic: "homeassistant/pool/bayrolAS5/electrolyser-voltage"
+- state_topic: "d02/23ASE2-05145/v/4.104"
   name: "Electrolyzer voltage"
-  unique_id: bayrolas5_electrolyser_voltage
+  unique_id: electrolyser_voltage
   value_template: "{{ value_json.v / 10 | round(2)}}"
   unit_of_measurement: "V"
   device:
@@ -29,9 +29,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.105', 'homeassistant/pool/bayrolAS5/electrolyser-current' A /10
-- state_topic: "homeassistant/pool/bayrolAS5/electrolyser-current"
+- state_topic: "d02/23ASE2-05145/v/4.105"
   name: "Electrolyzer current"
-  unique_id: bayrolas5_electrolyser_current
+  unique_id: electrolyser_current
   value_template: "{{ value_json.v / 10 | round(2)}}"
   unit_of_measurement: "A"
   device:
@@ -39,9 +39,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.107', 'homeassistant/pool/bayrolAS5/battery-voltage' V /100
-- state_topic: "homeassistant/pool/bayrolAS5/battery-voltage"
+- state_topic: "d02/23ASE2-05145/v/4.107"
   name: "Battery voltage"
-  unique_id: bayrolas5_battery_voltage
+  unique_id: battery_voltage
   value_template: "{{ value_json.v / 100 | round(2)}}"
   unit_of_measurement: "V"
   device:
@@ -49,9 +49,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.112', 'homeassistant/pool/bayrolAS5/timer-polarity-reversal' s
-- state_topic: "homeassistant/pool/bayrolAS5/timer-polarity-reversal"
+- state_topic: "d02/23ASE2-05145/v/4.112"
   name: "Time before next polarity reversal"
-  unique_id: bayrolas5_timer_polarity_reversal
+  unique_id: timer_polarity_reversal
   value_template: "{{ value_json.v | round(2)}}"
   unit_of_measurement: "s"
   device:
@@ -59,9 +59,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.119', 'homeassistant/pool/bayrolAS5/time-since-last-reversal' s
-- state_topic: "homeassistant/pool/bayrolAS5/time-since-last-reversal"
+- state_topic: "d02/23ASE2-05145/v/4.119"
   name: "Time since polarity reversal"
-  unique_id: bayrolas5_time_since_last_reversal
+  unique_id: time_since_last_reversal
   value_template: "{{ value_json.v | round(2)}}"
   unit_of_measurement: "s"
   device:
@@ -69,29 +69,29 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.182', 'homeassistant/pool/bayrolAS5/ph' pH /10
-- state_topic: "homeassistant/pool/bayrolAS5/ph"
+- state_topic: "d02/23ASE2-05145/v/4.182"
   name: "pH"
-  unique_id: bayrolas5_ph
+  unique_id: ph
   value_template: "{{ value_json.v / 10 | round(2)}}"
   unit_of_measurement: ""
   device:
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/4.2', 'homeassistant/pool/bayrolAS5/ph-target'
-- state_topic: "homeassistant/pool/bayrolAS5/ph-target"
+# 'd02/XXXXXX-XXXXX/v/4.2', 'homeassistant/pool/bayrolAS5/ph-target' /10
+- state_topic: "d02/23ASE2-05145/v/4.2"
   name: "pH Target"
-  unique_id: bayrolas5_ph_target
-  value_template: "{{ value_json.v | round(2)}}"
+  unique_id: ph_target
+  value_template: "{{ value_json.v /10 | round(2)}}"
   unit_of_measurement: ""
   device:
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.26', 'homeassistant/pool/bayrolAS5/redox-alert-max'
-- state_topic: "homeassistant/pool/bayrolAS5/redox-alert-max"
+- state_topic: "d02/23ASE2-05145/v/4.26"
   name: "Redox Alert Max"
-  unique_id: bayrolas5_redox_alert_max
+  unique_id: redox_alert_max
   value_template: "{{ value_json.v | round(2)}}"
   unit_of_measurement: "mV"
   device:
@@ -99,9 +99,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.27', 'homeassistant/pool/bayrolAS5/redox-alert-min'
-- state_topic: "homeassistant/pool/bayrolAS5/redox-alert-min"
+- state_topic: "d02/23ASE2-05145/v/4.27"
   name: "Redox Alert Min"
-  unique_id: bayrolas5_redox_alert_min
+  unique_id: redox_alert_min
   value_template: "{{ value_json.v | round(2)}}"
   unit_of_measurement: "mV"
   device:
@@ -109,9 +109,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.28', 'homeassistant/pool/bayrolAS5/redox-alert'
-- state_topic: "homeassistant/pool/bayrolAS5/redox-alert"
+- state_topic: "d02/23ASE2-05145/v/4.28"
   name: "Redox Target"
-  unique_id: bayrolas5_redox_target
+  unique_id: redox_target
   value_template: "{{ value_json.v | round(2)}}"
   unit_of_measurement: "mV"
   device:
@@ -119,9 +119,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.3', 'homeassistant/pool/bayrolAS5/ph-alert-max' /10
-- state_topic: "homeassistant/pool/bayrolAS5/ph-alert-max"
+- state_topic: "d02/23ASE2-05145/v/4.3"
   name: "pH Alert Max"
-  unique_id: bayrolas5_ph_alert_max
+  unique_id: ph_alert_max
   value_template: "{{ value_json.v / 10 | round(2)}}"
   unit_of_measurement: ""
   device:
@@ -129,9 +129,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.34', 'homeassistant/pool/bayrolAS5/min-control-ph' /100
-- state_topic: "homeassistant/pool/bayrolAS5/min-control-ph"
+- state_topic: "d02/23ASE2-05145/v/4.34"
   name: "Minimal approach to control the pH"
-  unique_id: bayrolas5_min_control_ph
+  unique_id: min_control_ph
   value_template: "{{ value_json.v / 100 | round(2)}}"
   unit_of_measurement: ""
   device:
@@ -139,9 +139,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.38', 'homeassistant/pool/bayrolAS5/ph-dosing-cycle' s
-- state_topic: "homeassistant/pool/bayrolAS5/ph-dosing-cycle"
+- state_topic: "d02/23ASE2-05145/v/4.38"
   name: "pH dosing cycle"
-  unique_id: bayrolas5_ph_dosing_cycle
+  unique_id: ph_dosing_cycle
   value_template: "{{ value_json.v | round(2)}}"
   unit_of_measurement: "s"
   device:
@@ -149,9 +149,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.4', 'homeassistant/pool/bayrolAS5/ph-alert-min' /10
-- state_topic: "homeassistant/pool/bayrolAS5/ph-alert-min"
+- state_topic: "d02/23ASE2-05145/v/4.4"
   name: "pH Alert Min"
-  unique_id: bayrolas5_ph_alert_min
+  unique_id: ph_alert_min
   value_template: "{{ value_json.v / 10 | round(2)}}"
   unit_of_measurement: "pH"
   device:
@@ -159,9 +159,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.47', 'homeassistant/pool/bayrolAS5/ph-dosing-speed' %
-- state_topic: "homeassistant/pool/bayrolAS5/ph-dosing-speed"
+- state_topic: "d02/23ASE2-05145/v/4.47"
   name: "pH dosing speed"
-  unique_id: bayrolas5_ph_dosing_speed
+  unique_id: ph_dosing_speed
   value_template: "{{ value_json.v | round(2)}}"
   unit_of_measurement: "%"
   device:
@@ -169,9 +169,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.5', 'homeassistant/pool/bayrolAS5/ph-dosage-control-time' m
-- state_topic: "homeassistant/pool/bayrolAS5/ph-dosage-control-time"
+- state_topic: "d02/23ASE2-05145/v/4.5"
   name: "pH dosage control time interval"
-  unique_id: bayrolas5_ph_dosage_control_time
+  unique_id: ph_dosage_control_time
   value_template: "{{ value_json.v | round(2)}}"
   unit_of_measurement: "m"
   device:
@@ -179,9 +179,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.51', 'homeassistant/pool/bayrolAS5/polarity-reversal-times' m
-- state_topic: "homeassistant/pool/bayrolAS5/polarity-reversal-times"
+- state_topic: "d02/23ASE2-05145/v/4.51"
   name: "Polarity reversal times"
-  unique_id: bayrolas5_polarity_reversal_times
+  unique_id: polarity_reversal_times
   value_template: "{{ value_json.v | round(2)}}"
   unit_of_measurement: "m"
   device:
@@ -189,9 +189,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.69', 'homeassistant/pool/bayrolAS5/hour-count' h
-- state_topic: "homeassistant/pool/bayrolAS5/hour-count"
+- state_topic: "d02/23ASE2-05145/v/4.69"
   name: "Hourly counter"
-  unique_id: bayrolas5_hour_count
+  unique_id: hour_count
   value_template: "{{ value_json.v | round(2)}}"
   unit_of_measurement: "h"
   device:
@@ -199,9 +199,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.7', 'homeassistant/pool/bayrolAS5/min-count' m
-- state_topic: "homeassistant/pool/bayrolAS5/min-count"
+- state_topic: "d02/23ASE2-05145/v/4.7"
   name: "Minutes counter"
-  unique_id: bayrolas5_min_count
+  unique_id: min_count
   value_template: "{{ value_json.v | round(2)}}"
   unit_of_measurement: "m"
   device:
@@ -209,9 +209,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.82', 'homeassistant/pool/bayrolAS5/redox' mv
-- state_topic: "homeassistant/pool/bayrolAS5/redox"
+- state_topic: "d02/23ASE2-05145/v/4.82"
   name: "Redox"
-  unique_id: bayrolas5_redox
+  unique_id: redox
   value_template: "{{ value_json.v | round(2)}}"
   unit_of_measurement: "mv"
   device:
@@ -219,9 +219,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.89', 'homeassistant/pool/bayrolAS5/ph-dosing-rate' %
-- state_topic: "homeassistant/pool/bayrolAS5/ph-dosing-rate"
+- state_topic: "d02/23ASE2-05145/v/4.89"
   name: "pH dosing rate"
-  unique_id: bayrolas5_ph_dosing_rate
+  unique_id: ph_dosing_rate
   value_template: "{{ value_json.v | round(2)}}"
   unit_of_measurement: "%"
   device:
@@ -229,9 +229,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.91', 'homeassistant/pool/bayrolAS5/electrolyser-prod-rate' %
-- state_topic: "homeassistant/pool/bayrolAS5/electrolyser-prod-rate"
+- state_topic: "d02/23ASE2-05145/v/4.91"
   name: "Electrolyzer production rate"
-  unique_id: bayrolas5_electrolyser_prod_rate
+  unique_id: electrolyser_prod_rate
   value_template: "{{ value_json.v | round(2)}}"
   unit_of_measurement: "%"
   device:
@@ -239,9 +239,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.92', 'homeassistant/pool/bayrolAS5/startup-delay' m
-- state_topic: "homeassistant/pool/bayrolAS5/startup-delay"
+- state_topic: "d02/23ASE2-05145/v/4.92"
   name: "Startup delay"
-  unique_id: bayrolas5_startup_delay
+  unique_id: startup_delay
   value_template: "{{ value_json.v | round(2)}}"
   unit_of_measurement: "min"
   device:
@@ -249,9 +249,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/4.98', 'homeassistant/pool/bayrolAS5/temperature' C /10
-- state_topic: "homeassistant/pool/bayrolAS5/temperature"
+- state_topic: "d02/23ASE2-05145/v/4.98"
   name: "Temperature"
-  unique_id: bayrolas5_temperature
+  unique_id: temperature
   value_template: "{{ value_json.v / 10 | round(2)}}"
   unit_of_measurement: "°C"
   device:
@@ -259,9 +259,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/5.3', 'homeassistant/pool/bayrolAS5/ph-prod-rate' %
-- state_topic: "homeassistant/pool/bayrolAS5/ph-prod-rate"
+- state_topic: "d02/23ASE2-05145/v/5.3"
   name: "Ph production rate"
-  unique_id: bayrolas5_ph_prod_rate
+  unique_id: ph_prod_rate
   value_template: >
     {% if value_json.v == 19.5 %}
       "x0.75"
@@ -277,9 +277,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/5.4', 'homeassistant/pool/bayrolAS5/redox-state'
-- state_topic: "homeassistant/pool/bayrolAS5/redox-state"
+- state_topic: "d02/23ASE2-05145/v/5.4"
   name: "Redox ON / OFF"
-  unique_id: bayrolas5_redox_state
+  unique_id: redox_state
   value_template: >
     {% if value_json.v == 19.18 %}
       "ON"
@@ -293,9 +293,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/5.41', 'homeassistant/pool/bayrolAS5/redox-mode'
-- state_topic: "homeassistant/pool/bayrolAS5/redox-mode"
+- state_topic: "d02/23ASE2-05145/v/5.41"
   name: "Redox Mode"
-  unique_id: bayrolas5_redox_mode
+  unique_id: redox_mode
   value_template: >
     {% if value_json.v == 19.195 %}
       "Auto"
@@ -311,9 +311,9 @@
     identifiers: "23ASE2-05145"
 
 # 'd02/XXXXXX-XXXXX/v/5.98', 'homeassistant/pool/bayrolAS5/filtration-state'
-- state_topic: "homeassistant/pool/bayrolAS5/filtration-state"
+- state_topic: "d02/23ASE2-05145/v/5.98"
   name: "Filtration"
-  unique_id: bayrolas5_filtration_state
+  unique_id: filtration_state
   value_template: >
     {% if value_json.v == 19.177 %}
       "ON"

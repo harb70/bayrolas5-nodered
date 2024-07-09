@@ -1,0 +1,247 @@
+[
+    {
+        "id": "5bd26b90a33373fd",
+        "type": "tab",
+        "label": "Bayrol AS5",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dcd9e1cae3ef0089",
+        "type": "mqtt in",
+        "z": "5bd26b90a33373fd",
+        "name": "Bayrol AS5 metrics",
+        "topic": "d02/XXXXXX-XXXXX/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 340,
+        "wires": [
+            [
+                "ebe53bfe27cdc827"
+            ]
+        ]
+    },
+    {
+        "id": "ebe53bfe27cdc827",
+        "type": "mqtt out",
+        "z": "5bd26b90a33373fd",
+        "name": "Mosquitto Home Assistant",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "",
+        "x": 660,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "797a59bd7098e60b",
+        "type": "mqtt out",
+        "z": "5bd26b90a33373fd",
+        "name": "Bayrol broker",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "",
+        "x": 820,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "91d9821ec0d3b7e3",
+        "type": "function",
+        "z": "5bd26b90a33373fd",
+        "name": "create messages to \"g\" topic",
+        "func": "return {topic:msg.payload.state_topic.replace('/v/','/g/'),payload:''};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 140,
+        "wires": [
+            [
+                "797a59bd7098e60b"
+            ]
+        ]
+    },
+    {
+        "id": "37772ac51486b23d",
+        "type": "file in",
+        "z": "5bd26b90a33373fd",
+        "name": "read mqtt.yaml",
+        "filename": "/homeassistant/mqtt.yaml",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 360,
+        "y": 60,
+        "wires": [
+            [
+                "cbee8643f3d382ef"
+            ]
+        ]
+    },
+    {
+        "id": "cbee8643f3d382ef",
+        "type": "yaml",
+        "z": "5bd26b90a33373fd",
+        "property": "payload",
+        "name": "mqtt.yaml parse",
+        "x": 620,
+        "y": 60,
+        "wires": [
+            [
+                "5782505e5cfa2496"
+            ]
+        ]
+    },
+    {
+        "id": "3e7e126e2cc4b4fd",
+        "type": "inject",
+        "z": "5bd26b90a33373fd",
+        "name": "Refresh data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "900",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "120",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "37772ac51486b23d"
+            ]
+        ]
+    },
+    {
+        "id": "5782505e5cfa2496",
+        "type": "split",
+        "z": "5bd26b90a33373fd",
+        "name": "split data to create one message per topic",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "91d9821ec0d3b7e3"
+            ]
+        ]
+    },
+    {
+        "id": "7b460e081145ee06",
+        "type": "comment",
+        "z": "5bd26b90a33373fd",
+        "name": "Refresh data flow, read mqtt.yaml, and send mqtt messages in the \"g\" topic to trigger the refresh",
+        "info": "",
+        "x": 350,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "2c52e50bbfb69769",
+        "type": "comment",
+        "z": "5bd26b90a33373fd",
+        "name": "Normal flow, each message read on the Bayrol broker is sent to HA mosquitto broker",
+        "info": "",
+        "x": 320,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "5e9b943f5d1f22f3",
+        "type": "mqtt-broker",
+        "name": "Bayrol Broker",
+        "broker": "wss://www.bayrol-poolaccess.de:8083",
+        "port": "1883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "678d9322240db5c6",
+        "type": "mqtt-broker",
+        "name": "Home Assistant Mosquitto MQTT",
+        "broker": "",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
