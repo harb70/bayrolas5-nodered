@@ -276,14 +276,14 @@
     name: "bayrolas5"
     identifiers: "23ASE2-05145"
 
-# 'd02/XXXXXX-XXXXX/v/5.4', 'redox-state' NOT WORKING
-- state_topic: "d02/23ASE2-05145/v/5.4"
+# 'd02/XXXXXX-XXXXX/v/5.40', 'redox-state'
+- state_topic: "d02/23ASE2-05145/v/5.40"
   name: "Redox ON / OFF"
   unique_id: redox_state
   value_template: >
-    {% if value_json.v | float == 19.6 %}
+    {% if value_json.v | float == 19.17 %}
       "ON"
-    {% elif value_json.v | float == 19.17 %}
+    {% elif value_json.v | float == 19.18 %}
       "OFF"
     {% else %}
       "UNKNOWN"
@@ -303,6 +303,22 @@
       "Auto Plus"
     {% elif value_json.v | float == 19.106 %}
       "Constant Production"
+    {% else %}
+      "UNKNOWN"
+    {% endif %}
+  device:
+    name: "bayrolas5"
+    identifiers: "23ASE2-05145"
+
+# 'd02/XXXXXX-XXXXX/v/5.42', 'ph-state'
+- state_topic: "d02/23ASE2-05145/v/5.42"
+  name: "pH ON / OFF"
+  unique_id: ph_state
+  value_template: >
+    {% if value_json.v | float == 19.17 %}
+      "ON"
+    {% elif value_json.v | float == 19.18 %}
+      "OFF"
     {% else %}
       "UNKNOWN"
     {% endif %}
